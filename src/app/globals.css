@@ -1,8 +1,16 @@
 @import "tailwindcss";
+/* ✅ Correct - globals.css */
+
+@tailwind utilities;
+
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #DB14B9;
+  --primary-light: #EC47D0;
+  --muted: #E5E7EB;
 }
 
 @theme inline {
