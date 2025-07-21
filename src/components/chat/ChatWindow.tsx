@@ -32,7 +32,7 @@ export default function ChatWindow({
     <div className="flex flex-col flex-1 bg-muted relative">
 
       {/* Chat Header */}
-      <div className="sticky top-0 bg-white border-b px-4 py-3 font-medium shadow-sm z-10 flex items-center justify-between">
+      <div className="sticky top-0 bg-white border-b px-4 py-3 h-[53px] font-medium shadow-sm z-10 flex items-center justify-between">
         <div className="flex items-center gap-2">
           {isMobile && onBack && (
             <Button variant="ghost" size="icon" onClick={onBack}>
@@ -52,7 +52,7 @@ export default function ChatWindow({
       </div>
 
       {/* Message Area */}
-      <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3">
+      <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 bg-gradient-to-br from-purple-200 to-indigo-100 rounded-2xl backdrop-blur-sm bg-white/10 shadow-inner font-sfpro">
         {messages.map((msg) => (
           <MessageBubble key={msg.id} sender={msg.sender} content={msg.content} />
         ))}

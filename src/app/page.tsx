@@ -40,6 +40,7 @@ export default function ChatPage() {
   if (isMobile && !activeUser) {
     return (
       <ChatSidebar
+        isMobile={isMobile}
         activeUser=""
         onSelectUser={(userId) => {
           const user = mockUsers.find((u) => u.id === userId);
@@ -52,7 +53,7 @@ export default function ChatPage() {
   // If mobile and chat selected, show only chat window
   if (isMobile && activeUser) {
     return (
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-[calc(100vh-4rem)]">
         <ChatWindow
           messages={messages}
           typing={typing}
@@ -67,7 +68,7 @@ export default function ChatPage() {
 
   // Desktop layout
   return (
-    <div className="flex h-screen">
+    <div className="flex h-[calc(100vh-4rem)]">
       <ChatSidebar
         activeUser={activeUser?.id || ''}
         onSelectUser={(userId) => {

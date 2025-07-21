@@ -15,10 +15,10 @@ export default function MessageBubble({ content, sender }: MessageBubbleProps) {
       initial={{ opacity: 0, y: 5 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        'p-3 max-w-xs rounded-xl text-sm my-1',
+        'p-3 max-w-xs rounded-2xl text-sm my-1',
         sender === 'me'
-          ? 'bg-blue-600 text-white self-end'
-          : 'bg-muted text-foreground self-start'
+          ? 'bg-[#a40a76] text-white self-end'
+          : 'bg-white text-foreground self-start'
       )}
     >
       {content}

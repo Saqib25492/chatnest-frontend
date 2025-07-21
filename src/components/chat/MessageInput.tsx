@@ -16,13 +16,13 @@ export default function MessageInput({ onSend }: { onSend: (msg: string) => void
   };
 
   return (
-    <div className="flex items-center gap-2 p-2 border-t">
+    <div className="flex items-center gap-2 p-2 border-t bg-white">
       <Textarea
         placeholder="Type your message..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
         rows={1}
-        className="resize-none"
+        className="resize-none bg-gradient-to-br from-purple-200 to-indigo-100"
       />
       <Button onClick={handleSend}>Send</Button>
     </div>
